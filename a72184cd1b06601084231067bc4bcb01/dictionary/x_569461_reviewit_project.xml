@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Project" max_length="40" name="x_569461_reviewit_project" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="255" name="description" type="string"/>
+        <element attributes="encode_utf8=false" label="Developer" max_length="32" name="developer" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="normal" label="Priority" max_length="40" name="priority" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" value="high"/>
+                <element inactive_on_update="false" label="Normal" value="normal"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Project id" max_length="40" name="project_id" type="string"/>
+        <index name="index">
+            <element name="developer"/>
+        </index>
+    </element>
+</database>
